@@ -1,0 +1,10 @@
+Moving_Average_3_Months = 
+CALCULATE (
+    AVERAGEX ( 'Sheet1', 'Sheet1'[EE] ),
+    DATESINPERIOD (
+        'Sheet1'[month].[Month] ,
+        LASTDATE ( 'Sheet1'[month].[Month] ),
+        -3,
+        MONTH
+    )
+)
