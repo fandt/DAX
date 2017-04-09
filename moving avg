@@ -8,3 +8,10 @@ CALCULATE (
         MONTH
     )
 )
+
+
+--OR--
+
+YTD12 = 
+CALCULATE(sum('Sheet1'[EE]),FILTER(ALL('Moving_Average_3_Months'),'Moving_Average_3_Months'[Year]=
+MAX('Moving_Average_3_Months'[Year])&&'Moving_Average_3_Months'[Date]<= MAX('Moving_Average_3_Months'[Date])))
